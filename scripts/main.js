@@ -1,1 +1,3 @@
-import { getParks, sliceParks } from "./parks/ParkProvider.js"
+// Print the dropdown menu with parks when page loads
+import { selectNPSParks } from "./parks/ParkMenu.js"
+selectNPSParks();
