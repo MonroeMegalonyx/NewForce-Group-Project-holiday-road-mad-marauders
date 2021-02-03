@@ -5,5 +5,5 @@
 
  // Takes the name os NPS park and adds HTML tags 
 export function stringNPSParksCard(parkfoo) {
-    return `<h2>${parkfoo}</h2> <button>`;
+    return `<h2>${parkfoo}</h2>`;
 }
