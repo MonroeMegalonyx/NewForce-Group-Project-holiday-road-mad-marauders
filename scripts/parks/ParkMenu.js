@@ -54,3 +54,15 @@ document.querySelector("body").addEventListener("change", (eventfoo) => {
         document.querySelector(".parks-card").innerHTML = `${selectedParkAsHTML}`;
     }
 });
+
+/*
+Event listener will activate anytime there is a click in the body
+If the click event was on the details button for NPS parks, display the details below the parks card
+*/
+document.querySelector("body").addEventListener("click", (eventfoo) => {
+    if (eventfoo.target.id.includes("NPS--")) {
+        // This code only runs if the user clicks the details button for parks
+        console.log("You want more details for this park? Fuggedaboutit. Heres the park name though:",eventfoo.target.id);
+    }
+});
+
