@@ -27,6 +27,7 @@ function render(attractionsCollection){
   </select>
   `
 }
+
 const attractionContainer = document.querySelector(".attractions-card");
 // select the main element in the html and store it in eventHub
 const eventHub = document.querySelector("main")
