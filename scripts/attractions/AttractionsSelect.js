@@ -42,7 +42,7 @@ eventHub.addEventListener("change", (eventObject) => {
         // Key/value pairs here
         name: eventObject.target.value,
         id: eventObject.target.id
-    }
+      }
       
     
         let attractionHTML = (Attraction(newAttraction));
@@ -53,46 +53,46 @@ eventHub.addEventListener("change", (eventObject) => {
 })
 
 // document.querySelector("body").addEventListener("click", (clickObject) => {
-//   if(clickObject.target.id.includes("details--") {
+//   if (clickObject.target.id.includes("details--") {
 
 //   }
 // })
 
-let detailsBox = document.querySelector(".attractions-card__details");
-// select the main element in the html and store it in eventHub
-const eventArea = document.querySelector("body")
-// listen to main for a changeEvent, which is associated with a dropdown selection, make a parameter called eventObject for this upcoming function
-eventArea.addEventListener("click", (eventObject) => {
-  getAttractions().then(() => {
-  let attraction = useAttractions();
+// let detailsBox = document.querySelector(".attractions-card__details");
+// // select the main element in the html and store it in eventHub
+// const eventArea = document.querySelector("body")
+// // listen to main for a changeEvent, which is associated with a dropdown selection, make a parameter called eventObject for this upcoming function
+// eventArea.addEventListener("click", (eventObject) => {
+//   getAttractions().then(() => {
+//   let attraction = useAttractions();
    
-    // console.log(event.target.id.split("-")[1])
-    if (eventObject.target.id.includes("details--")) {
+//     // console.log(event.target.id.split("-")[1])
+//     if (eventObject.target.id.includes("details--")) {
       
-      let singleAttraction = attraction.find(attractionInLoop => attractionInLoop.id == eventObject.target.id.split("--")[1])
-      // let associateName = [];
-      // let associateAlibi = [];
-      console.log(attraction)
-      console.log(eventObject.target.id)
-      console.log(eventObject.target.id.split("--"))
-      console.log(singleAttraction)
-      for(let i = 0; i < singleAttraction.length; i++) {
+//       let singleAttraction = attraction.find(attractionInLoop => attractionInLoop.id == eventObject.target.id.split("--")[1])
+//       // let associateName = [];
+//       // let associateAlibi = [];
+//       console.log(attraction)
+//       console.log(eventObject.target.id)
+//       console.log(eventObject.target.id.split("--"))
+//       console.log(singleAttraction)
+//       for(let i = 0; i < singleAttraction.length; i++) {
         
-        associateName += singleCriminal.known_associates[i].name + " "
-        associateAlibi += singleCriminal.known_associates[i].alibi + " "
+//         associateName += singleCriminal.known_associates[i].name + " "
+//         associateAlibi += singleCriminal.known_associates[i].alibi + " "
        
-        detailsBox.innerHTML = `
-        <div class="details-container">
-          State: ${associateName}
-          City: ${associateAlibi}
-          Description: ${associateAlibi}
-          Ameneties: ${associateAlibi}
-        </div>
-      `;
-      }
-    }
-  })
-})   
+//         detailsBox.innerHTML = `
+//         <div class="details-container">
+//           State: ${associateName}
+//           City: ${associateAlibi}
+//           Description: ${associateAlibi}
+//           Ameneties: ${associateAlibi}
+//         </div>
+//       `;
+//       }
+//     }
+//   })
+// })   
 
 // "id": 1,
 // "name": "Big White Shirt",
