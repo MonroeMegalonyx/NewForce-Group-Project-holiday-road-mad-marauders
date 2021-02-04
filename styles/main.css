@@ -38,7 +38,18 @@ main {
 }
 
 .preview-container {
-  flex-basis: 50%;
+  flex-basis: 70%;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.parks-container,
+.attractions-container,
+.eateries-container {
+  flex-basis: 30%;
 }
 
 
