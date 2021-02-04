@@ -26,11 +26,12 @@ main {
 }
 
 .attraction-card h2 {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
+  font-size: 1.5em;
 }
 
 .attraction-card button {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .dropdown-container {
@@ -44,12 +45,67 @@ main {
 .container-flex {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 4em;
 }
 
 .parks-container,
 .attractions-container,
 .eateries-container {
   flex-basis: 30%;
+}
+
+.details-container h3 {
+  font-size: 1.2em;
+}
+
+.eateries-card__details h2,
+.eateries-card__details h4 {
+  font-size: 1em;
+}
+
+.eateries-card h2 {
+  font-size: 1.5em;
+}
+
+.eateries-card button {
+  margin-bottom: 1em;
+}
+
+.parks-card h2 {
+  font-size: 1.5em;
+}
+
+.parks-card button {
+  margin-bottom: 1em;
+}
+
+.parks-card__details,
+.eateries-card__details,
+.details-container {
+  line-height: 1em;
+}
+
+.forecast-card {
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: black; */
+  /* color: #fff; */
+  padding: 2em;
+  margin-bottom: 1.5em;
+  border-radius: 5px;
+}
+
+.forecast-card p {
+  flex-basis: 12%;
+}
+
+.parks-card__details h2 {
+  font-size: 1em;
+}
+
+.parks-card__details p {
+  font-size: .9em;
 }
 
 

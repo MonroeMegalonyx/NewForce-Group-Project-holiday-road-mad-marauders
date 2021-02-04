@@ -75,8 +75,6 @@ eventArea.addEventListener("click", (eventObject) => {
           <h3>State:</h3> <p>${singleAttraction.state}</p>
           <h3>City:</h3> <p>${singleAttraction.city}</p>
           <h3>Description:</h3> <p>${singleAttraction.description}</p>
-          <h3>Souvenirs:</h3> <p>${singleAttraction.ameneties.souvenirs}</p>
-          <h3>Restrooms:</h3> <p>${singleAttraction.ameneties.restrooms}</p>
         </div>
       `
     }
