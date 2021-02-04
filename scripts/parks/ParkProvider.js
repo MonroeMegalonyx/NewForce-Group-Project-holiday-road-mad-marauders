@@ -26,6 +26,6 @@ export const getNPSdata = () => {
             Then save the actual data array to local object `parks`.
             */
             parks = nationalParkAPI.data;
-            console.log("Saved from API",parks)
+            //console.log("Saved from API",parks)
         });
 };
