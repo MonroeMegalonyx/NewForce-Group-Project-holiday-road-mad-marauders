@@ -37,13 +37,13 @@ function render(attractionsCollection){
 const attractionContainer = document.querySelector(".attractions-card");
 // select the main element in the html and store it in eventHub
 const eventHub = document.querySelector("main")
-// listen to main for a changeEvent, which is associated with a dropdown selection, make a parameter called eventObject for this upcoming function
+// listen to main for a changeEvent, make a parameter called eventObject for this function
 eventHub.addEventListener("change", (eventObject) => {
     
     // if the change happens in the dropdown with the id of attractionSelect
     if(eventObject.target.id === "attractionSelect"){
-      // we're calling the useAttractions function, using the .find method on that collection of arrays, we're pulling out x if what the user clicked on has the same value as x.name. x is each individual attraction, then we're putting all those names in a variable called newAttraction
-      let newAttraction = useAttractions().find(x => eventObject.target.value === x.name)
+      // we're calling the useAttractions function, using the .find method on that collection of arrays, we're pulling out individualAttraction if what the user clicked on has the same value as individualAttraction.name, then we're putting that name in a variable called newAttraction
+      let newAttraction = useAttractions().find(individualAttraction => eventObject.target.value === individualAttraction.name)
       
       // we're calling the Attraction function that builds an HTML representation and we're passing in the argument of newAttraction that has the name of the attraction that matches the one the user clicked on
       let attractionHTML = (Attraction(newAttraction));
@@ -53,61 +53,51 @@ eventHub.addEventListener("change", (eventObject) => {
   
 })
 
-// document.querySelector("body").addEventListener("click", (clickObject) => {
-//   if (clickObject.target.id.includes("details--") {
-
-//   }
-// })
-
+// getting a reference to the element where we want to print the details and storing it in detailsBox
 let detailsBox = document.querySelector(".attractions-card__details");
-// select the main element in the html and store it in eventHub
+// select the body element in the html and store it in eventArea
 const eventArea = document.querySelector("body")
-// listen to main for a changeEvent, which is associated with a dropdown selection, make a parameter called eventObject for this upcoming function
+// listen to the body for a click Event, make a parameter called eventObject for this function
 eventArea.addEventListener("click", (eventObject) => {
+  // calling the function that populates the useAttraction function, THEN... function
   getAttractions().then(() => {
+  // calling the function that stores a copy of the attractions array, and storing that array in a new variable
   let attraction = useAttractions();
-   
+    // if the user clicks on the details button...
     if (eventObject.target.id.includes("details--")) {
-      
+      // attraction array, using .find, looking for the attraction in the array that has the id that matches what the user clicked on, and storing the results in a new variable
       let singleAttraction = attraction.find(attractionInLoop => attractionInLoop.id == eventObject.target.id.split("--")[1])
-      let attractionName = "";
-      let attractionState = "";
-      let attractionCity = "";
-      let attractionDescription = "";
-      let attractionSouvenirs = "";
-      let attractionRestrooms = "";
-
-      console.log(eventObject.target.id)
-      console.log(eventObject.target.id.split("--"))
-      console.log(singleAttraction)
-        
-        attractionName += singleAttraction.name 
-        attractionState += singleAttraction.state
-        attractionCity += singleAttraction.city
-        attractionDescription += singleAttraction.description
-        attractionSouvenirs += singleAttraction.ameneties.souvenirs
-        attractionRestrooms += singleAttraction.ameneties.restrooms
-       
+      // finding the different values for the attraction's keys, and storing them in the appropriate variables
+      let attractionName = singleAttraction.name
+      let attractionState = singleAttraction.state
+      let attractionCity = singleAttraction.city
+      let attractionDescription = singleAttraction.description
+      let attractionSouvenirs = singleAttraction.ameneties.souvenirs
+      let attractionRestrooms = singleAttraction.ameneties.restrooms
+        // function made to test if the attractions have souvenirs and restrooms
+        function attractionTester(attractionTest) {
+          if (attractionTest === "false") {
+            return "There are none."
+          } else {
+            return "There are some."
+          }
+        }
+        // running the tests and storing the results in a new variable
+        let finalSouvenirResults = attractionTester(attractionSouvenirs);
+        let finalRestroomResults = attractionTester(attractionRestrooms);
+      
+        // writing to the dom, the various properties of the object the user selected
         detailsBox.innerHTML = `
         <div class="details-container">
           <h3>Name:</h3> <p>${attractionName}</p>
           <h3>State:</h3> <p>${attractionState}</p>
           <h3>City:</h3> <p>${attractionCity}</p>
           <h3>Description:</h3> <p>${attractionDescription}</p>
-          <h3>Souvenirs:</h3> <p>${attractionSouvenirs}</p>
-          <h3>Restrooms:</h3> <p>${attractionRestrooms}</p>
+          <h3>Souvenirs:</h3> <p>${finalSouvenirResults}</p>
+          <h3>Restrooms:</h3> <p>${finalRestroomResults}</p>
         </div>
       `
     }
   })
 })   
 
-// "id": 1,
-// "name": "Big White Shirt",
-// "state": "AL",
-// "city": "Andalusia",
-// "description": "Andalusia, Alabama, is the white dress-shirt capital of America, and this highly photographed enormous white shirt sign is a reminder of that. According to Roadside America, the tie is changed seasonally.",
-// "ameneties": {
-//     "souvenirs": false,
-//     "restrooms": false
-// }
