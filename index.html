@@ -13,7 +13,7 @@
     <header>
     <!-- Website Header -->
     <!-- Logo -->
-    <img>
+    <img src="https://leanfrontiers.com/wp-content/uploads/2018/12/logo-placeholder-png.png" alt="logo">
     <!-- Website Title -->
     <h1>Get ya National Parks Info Here!</h1>
     </header>
@@ -31,28 +31,35 @@
         </section>
 
         <!-- Itinerary Preview Component -->
-        <section>
+        <section class="preview-container">
             <!-- Weather Forecast Component -->
             <div class="forecast-card"></div>
-
+          <div class="container-flex">
             <!-- National Parks Preview Component -->
-            <div class="parks-card"></div>
-            <div class="parks-card__details"></div>
+            <div class="parks-container">
+                <div class="parks-card"></div>
+                <div class="parks-card__details"></div>
+            </div>
 
             <!-- Bizarre Attractions Component -->
-            <div class="attractions-card"></div>
-            <div class="attractions-card__details"></div>
+            <div class="attractions-container">
+                <div class="attractions-card"></div>
+                <div class="attractions-card__details"></div>
+              </div>
 
             <!-- Eateries Component -->
-            <div class="eateries-card"></div>
-            <div class="eateries-card__details"></div>
-
+            <div class="eateries-container">
+                <div class="eateries-card"></div>
+                <div class="eateries-card__details"></div>
+            </div>
+          </div>
         </section>
 
     </main>
 
     <footer>
-        <p>Copyright 2021 Aaron, Gabe, & Vincent</p>
+        <img src="https://www.graphicsbeam.com/wp-content/uploads/2012/08/Genius.jpg" alt="lightbulb logo">
+        <p>Copyright &copy; 2021 Aaron, Gabe, & Vincent</p>
     </footer>
 
     <script type="module" src="scripts/main.js"></script>
