@@ -1,0 +1,74 @@
+header {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+}
+
+header img {
+  height: 12vh;
+  margin-right: 10em;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+}
+
+.parks-dropdown {
+  margin-bottom: 5em;
+}
+
+.attractions-dropdown {
+  margin-bottom: 5em;
+}
+
+.attraction-card h2 {
+  margin-bottom: 1em;
+}
+
+.attraction-card button {
+  margin-bottom: 2em;
+}
+
+.dropdown-container {
+  flex-basis: 10%;
+}
+
+.preview-container {
+  flex-basis: 70%;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.parks-container,
+.attractions-container,
+.eateries-container {
+  flex-basis: 30%;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+}
+
+footer p {
+  padding: 1em 0;
+}
+
+footer img {
+  height: 10vh;
+}
