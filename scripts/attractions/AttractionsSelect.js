@@ -66,35 +66,17 @@ eventArea.addEventListener("click", (eventObject) => {
     // if the user clicks on the details button...
     if (eventObject.target.id.includes("details--")) {
       // attraction array, using .find, looking for the attraction in the array that has the id that matches what the user clicked on, and storing the results in a new variable
-      let singleAttraction = attraction.find(attractionInLoop => attractionInLoop.id == eventObject.target.id.split("--")[1])
-      // finding the different values for the attraction's keys, and storing them in the appropriate variables
-      let attractionName = singleAttraction.name
-      let attractionState = singleAttraction.state
-      let attractionCity = singleAttraction.city
-      let attractionDescription = singleAttraction.description
-      let attractionSouvenirs = singleAttraction.ameneties.souvenirs
-      let attractionRestrooms = singleAttraction.ameneties.restrooms
-        // function made to test if the attractions have souvenirs and restrooms
-        function attractionTester(attractionTest) {
-          if (attractionTest === "false") {
-            return "There are none."
-          } else {
-            return "There are some."
-          }
-        }
-        // running the tests and storing the results in a new variable
-        let finalSouvenirResults = attractionTester(attractionSouvenirs);
-        let finalRestroomResults = attractionTester(attractionRestrooms);
+      let singleAttraction = attraction.find(attractionInLoop => attractionInLoop.id === +eventObject.target.id.split("--")[1])
       
         // writing to the dom, the various properties of the object the user selected
         detailsBox.innerHTML = `
         <div class="details-container">
-          <h3>Name:</h3> <p>${attractionName}</p>
-          <h3>State:</h3> <p>${attractionState}</p>
-          <h3>City:</h3> <p>${attractionCity}</p>
-          <h3>Description:</h3> <p>${attractionDescription}</p>
-          <h3>Souvenirs:</h3> <p>${finalSouvenirResults}</p>
-          <h3>Restrooms:</h3> <p>${finalRestroomResults}</p>
+          <h3>Name:</h3> <p>${singleAttraction.name}</p>
+          <h3>State:</h3> <p>${singleAttraction.state}</p>
+          <h3>City:</h3> <p>${singleAttraction.city}</p>
+          <h3>Description:</h3> <p>${singleAttraction.description}</p>
+          <h3>Souvenirs:</h3> <p>${singleAttraction.ameneties.souvenirs}</p>
+          <h3>Restrooms:</h3> <p>${singleAttraction.ameneties.restrooms}</p>
         </div>
       `
     }
