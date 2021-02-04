@@ -8,3 +8,5 @@ EateriesSelect()
 import {AttractionsSelect} from "./attractions/AttractionsSelect.js";
 
 AttractionsSelect();
+
+import {} from "./weather/WeatherForecast.js"
