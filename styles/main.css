@@ -1,3 +1,4 @@
+/* Header Section */
 header {
   display: flex;
   align-items: center;
@@ -10,6 +11,7 @@ header img {
   margin-right: 10em;
 }
 
+/* Main Section */
 main {
   display: flex;
   justify-content: space-around;
@@ -17,6 +19,7 @@ main {
   height: 75vh;
 }
 
+/* Dropdown Menus */
 .parks-dropdown {
   margin-bottom: 5em;
 }
@@ -45,7 +48,7 @@ main {
 .container-flex {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 4em;
 }
 
@@ -89,10 +92,7 @@ main {
 .forecast-card {
   display: flex;
   justify-content: space-evenly;
-  /* background-color: black; */
-  /* color: #fff; */
   padding: 2em;
-  margin-bottom: 1.5em;
   border-radius: 5px;
 }
 
@@ -108,7 +108,7 @@ main {
   font-size: .9em;
 }
 
-
+/* Footer Section */
 footer {
   display: flex;
   justify-content: center;
