@@ -20,14 +20,57 @@ main {
 }
 
 /* Dropdown Menus */
+.dropdown-container {
+  flex-basis: 10%;
+}
+
+/* Parks Dropdown */
 .parks-dropdown {
   margin-bottom: 5em;
 }
 
+/* Attractions Dropdown */
 .attractions-dropdown {
   margin-bottom: 5em;
 }
 
+/* Eateries Dropdown */
+
+/* Itineraries Preview Component */
+.preview-container {
+  flex-basis: 70%;
+}
+
+/* Weather Forecast Component */
+.forecast-card {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em;
+  border-radius: 5px;
+}
+
+.forecast-card p {
+  flex-basis: 12%;
+}
+
+/* National Parks Preview Component */
+.parks-card h2 {
+  font-size: 1.5em;
+}
+
+.parks-card button {
+  margin-bottom: 1em;
+}
+
+.parks-card__details h2 {
+  font-size: 1em;
+}
+
+.parks-card__details p {
+  font-size: .9em;
+}
+
+/* Bizarre Attractions Component */
 .attraction-card h2 {
   margin-bottom: .5em;
   font-size: 1.5em;
@@ -37,14 +80,25 @@ main {
   margin-bottom: 1em;
 }
 
-.dropdown-container {
-  flex-basis: 10%;
+.details-container h3 {
+  font-size: 1.2em;
 }
 
-.preview-container {
-  flex-basis: 70%;
+/* Eateries Component */
+.eateries-card h2 {
+  font-size: 1.5em;
 }
 
+.eateries-card button {
+  margin-bottom: 1em;
+}
+
+.eateries-card__details h2,
+.eateries-card__details h4 {
+  font-size: 1em;
+}
+
+/* Miscellaneous Stylings */
 .container-flex {
   display: flex;
   justify-content: space-evenly;
@@ -58,54 +112,10 @@ main {
   flex-basis: 30%;
 }
 
-.details-container h3 {
-  font-size: 1.2em;
-}
-
-.eateries-card__details h2,
-.eateries-card__details h4 {
-  font-size: 1em;
-}
-
-.eateries-card h2 {
-  font-size: 1.5em;
-}
-
-.eateries-card button {
-  margin-bottom: 1em;
-}
-
-.parks-card h2 {
-  font-size: 1.5em;
-}
-
-.parks-card button {
-  margin-bottom: 1em;
-}
-
 .parks-card__details,
 .eateries-card__details,
 .details-container {
   line-height: 1em;
-}
-
-.forecast-card {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2em;
-  border-radius: 5px;
-}
-
-.forecast-card p {
-  flex-basis: 12%;
-}
-
-.parks-card__details h2 {
-  font-size: 1em;
-}
-
-.parks-card__details p {
-  font-size: .9em;
 }
 
 /* Footer Section */
