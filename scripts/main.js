@@ -10,3 +10,4 @@ import {AttractionsSelect} from "./attractions/AttractionsSelect.js";
 AttractionsSelect();
 
 import {} from "./weather/WeatherForecast.js"
+import {} from "./itineraries/ItineraryString.js"

@@ -33,11 +33,18 @@ main {
 }
 
 /* Attractions Dropdown */
-.attractions-dropdown {
+.attractions-dropdown,
+.eateries-dropdown {
   margin-bottom: 5em;
 }
 
 /* Eateries Dropdown */
+ 
+/* Save Itinerary Button */
+.save-itinerary {
+  max-width: 10em;
+  align-self: center;
+}
 
 /* Itineraries Preview Component */
 .preview-container {
