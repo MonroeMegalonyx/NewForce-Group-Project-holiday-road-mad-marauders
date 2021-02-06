@@ -8,7 +8,7 @@ eventHub.addEventListener("click", clickEvent => {
       // Make a new object representation of a note, this seems to be the object with the info that we want to get and save into the local api, stored in a variable
       let newItinerary = {
           // Key/value pairs here
-          // "park": document.querySelector("#parks-heading").innerHTML, getting weird errors here about the api
+          "park": document.querySelector("#park-heading").innerHTML,                                       
           "attraction": document.querySelector(".attractions-dropdown"),
           "eatery": document.querySelector(".eateries-dropdown")
       }
