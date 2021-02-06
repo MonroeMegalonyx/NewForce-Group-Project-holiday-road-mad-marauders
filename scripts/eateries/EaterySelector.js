@@ -26,7 +26,7 @@ eventHub.addEventListener("change", (clickObject) => {
         if(clickObject.target.id === "EaterySelect"){
             // console.log(clickObject.target)
             document.querySelector('.eateries-card').innerHTML = `
-            <h2>${clickObject.target.value}</h2>
+            <h2 id="eatery-heading">${clickObject.target.value}</h2>
             <button id="eateryDeet--${clickObject.target.value}">Get the Deets!</button>
             `
         }   
@@ -42,7 +42,7 @@ document.querySelector('main').addEventListener('click', (eventObject) => {
 
         document.querySelector('.eateries-card__details').innerHTML = `
         <h2>${eachEatery.businessName}</h2>
-            <p><em>${eachEatery.description}</em></p>
+        <p><em>${eachEatery.description}</em></p>
         <h4>${eachEatery.city}</h4>
         <h4>${eachEatery.state}</h4>
         `

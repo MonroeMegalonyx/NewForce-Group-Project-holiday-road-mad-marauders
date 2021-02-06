@@ -9,8 +9,8 @@ eventHub.addEventListener("click", clickEvent => {
       let newItinerary = {
           // Key/value pairs here
           "park": document.querySelector("#park-heading").innerHTML,                                       
-          "attraction": document.querySelector(".attractions-dropdown"),
-          "eatery": document.querySelector(".eateries-dropdown")
+          "attraction": document.querySelector("#attraction-heading").innerHTML,
+          "eatery": document.querySelector("#eatery-heading").innerHTML
       }
       console.log(newItinerary)
       
