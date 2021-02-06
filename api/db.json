@@ -1,3 +1,10 @@
 {
-	"itineraries": []
+  "itineraries": [
+    {
+      "park": "African Burial Ground",
+      "attraction": "Largest Fork in the US",
+      "eatery": "H&amp;H Soul Food",
+      "id": 1
+    }
+  ]
 }
