@@ -1,3 +1,46 @@
 {
-	"itineraries": []
+  "itineraries": [
+    {
+      "park": "African Burial Ground",
+      "attraction": "Largest Fork in the US",
+      "eatery": "H&amp;H Soul Food",
+      "id": 1
+    },
+    {
+      "park": "Acadia",
+      "attraction": "Elvis Memorial Chapel",
+      "eatery": "Gene &amp; Jude's",
+      "id": 2
+    },
+    {
+      "park": "African Burial Ground",
+      "attraction": "Owney the Stuffed Dog Postal Mascot",
+      "eatery": "The Lobster Shack Restaurant at Two Lights",
+      "id": 3
+    },
+    {
+      "park": "Abraham Lincoln Birthplace",
+      "attraction": "Big White Shirt",
+      "eatery": "Northwestern Steakhouse",
+      "id": 4
+    },
+    {
+      "park": "African Burial Ground",
+      "attraction": "Cabazon Dinosaurs",
+      "eatery": "Hudson's Hamburgers",
+      "id": 5
+    },
+    {
+      "park": "Acadia",
+      "attraction": "Elvis Memorial Chapel",
+      "eatery": "Gene &amp; Jude's",
+      "id": 6
+    },
+    {
+      "park": "Abraham Lincoln Birthplace",
+      "attraction": "Big White Shirt",
+      "eatery": "Marge's Pancake House",
+      "id": 7
+    }
+  ]
 }

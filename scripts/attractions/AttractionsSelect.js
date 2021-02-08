@@ -1,5 +1,5 @@
 import {useAttractions, getAttractions} from "./AttractionProvider.js";
-import {Attraction} from "./Attraction.js"
+import {Attraction, AttractionDetails} from "./Attraction.js"
 
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".attractions-dropdown")
@@ -67,16 +67,9 @@ eventArea.addEventListener("click", (eventObject) => {
     if (eventObject.target.id.includes("details--")) {
       // attraction array, using .find, looking for the attraction in the array that has the id that matches what the user clicked on, and storing the results in a new variable
       let singleAttraction = attraction.find(attractionInLoop => attractionInLoop.id === +eventObject.target.id.split("--")[1])
-      
+      let attractionDetailsHTML = AttractionDetails(singleAttraction)
         // writing to the dom, the various properties of the object the user selected
-        detailsBox.innerHTML = `
-        <div class="details-container">
-          <h3>Name:</h3> <p>${singleAttraction.name}</p>
-          <h3>State:</h3> <p>${singleAttraction.state}</p>
-          <h3>City:</h3> <p>${singleAttraction.city}</p>
-          <h3>Description:</h3> <p>${singleAttraction.description}</p>
-        </div>
-      `
+        detailsBox.innerHTML = attractionDetailsHTML
     }
   })
 })   
