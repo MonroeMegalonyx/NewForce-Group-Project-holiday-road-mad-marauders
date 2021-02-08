@@ -1,4 +1,4 @@
-import {saveItinerary} from "./ItineraryDataProvider.js"
+import {getItineraries, saveItinerary} from "./ItineraryDataProvider.js"
 import {Itinerary} from "./Itinerary.js"
 
 // getting a reference to the main element
@@ -20,7 +20,7 @@ eventHub.addEventListener("click", clickEvent => {
 
       // Change API state and application state, we're calling the saveNote function - which takes in the info from the argument of newNote and writes it to the local api, then we're calling the NoteList function, which I believe just gets everything again
       saveItinerary(newItinerary)
-      // .then(NoteList) // Refresh your list of notes once you've saved your new one, not sure the equivalent of this step
+      // .then(getItineraries) // Refresh your list of notes once you've saved your new one, not sure the equivalent of this step
       console.log(newItinerary)
   }
 })
